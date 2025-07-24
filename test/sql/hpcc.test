@@ -1,0 +1,23 @@
+# name: test/sql/hpcc.test
+# description: test hpcc extension
+# group: [sql]
+
+# Before we load the extension, this will fail
+statement error
+SELECT hpcc('Sam');
+----
+Catalog Error: Scalar Function with name hpcc does not exist!
+
+# Require statement will ensure this test is run with this extension loaded
+require hpcc
+
+# Confirm the extension works
+query I
+SELECT hpcc('Sam');
+----
+hpcc Sam 🐥
+
+query I
+SELECT hpcc_openssl_version('Michael') ILIKE 'hpcc Michael, my linked OpenSSL version is OpenSSL%';
+----
+true

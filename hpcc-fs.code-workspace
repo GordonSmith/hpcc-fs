@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cmake.generator": "Ninja",
+		"cmake.sourceDirectory": "${workspaceFolder}/duckdb/",
+		"cmake.buildDirectory": "${workspaceFolder}/build/debug/",
+		"cmake.configureArgs": [
+			"-DFORCE_COLORED_OUTPUT=1",
+			"-DEXTENSION_STATIC_BUILD=1",
+			"-DDUCKDB_EXTENSION_CONFIGS='${workspaceFolder}/extension_config.cmake'",
+			"-DOSX_BUILD_ARCH=",
+			"-DVCPKG_BUILD=1",
+			"-DCMAKE_TOOLCHAIN_FILE='${workspaceFolder}/HPCC-Platform/vcpkg/scripts/buildsystems/vcpkg.cmake'",
+			"-DDUCKDB_EXPLICIT_PLATFORM=''",
+			"-DCUSTOM_LINKER=",
+			"-DOVERRIDE_GIT_DESCRIBE=''",
+			"-DUNITTEST_ROOT_DIRECTORY='${workspaceFolder}/'",
+			"-DBENCHMARK_ROOT_DIRECTORY='${workspaceFolder}/'",
+			"-DENABLE_UNITTEST_CPP_TESTS=FALSE",
+			"-DBUILD_EXTENSION_TEST_DEPS=default",
+			"-DVCPKG_MANIFEST_DIR='${workspaceFolder}/'",
+			"-DCMAKE_BUILD_TYPE=Debug"
+		],
+		"editor.formatOnSave": true
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-vscode.cpptools-extension-pack",
+			"ms-vscode.cmake-tools"
+		]
+	}
+}

@@ -6,3 +6,6 @@
 	path = extension-ci-tools
 	url = https://github.com/duckdb/extension-ci-tools
 	branch = main
+[submodule "HPCC-Platform"]
+	path = HPCC-Platform
+	url = https://github.com/hpcc-systems/HPCC-Platform.git
